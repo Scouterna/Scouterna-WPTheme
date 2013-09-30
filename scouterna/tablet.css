@@ -1,0 +1,214 @@
+.w1{
+	padding: 0 2%;
+}
+#header .logo.style-2 {
+		background:url(images/logo-min.png) no-repeat;
+		width:93px;
+		height:34px;
+		float:none;
+		display:block;
+		margin-left:-27px;
+		text-indent: -9999px;
+}
+
+#header .logo {
+    margin: 0 0 0 -12px;
+}
+	
+.logo-link {
+	display:none;
+}
+
+.promo {
+    width: 710px;
+}
+
+.jcarousel-skin-scout{
+	width: 710px;
+	margin: 0 auto;
+}
+.jcarousel-control{
+	overflow:hidden;
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-align:center;
+	font:18px/20px 'scouternadinpro-medium-webfont', Arial, Helvetica, sans-serif;
+	position:relative;
+	z-index:100;
+	margin-top: -5px;
+	
+}
+
+
+* +html .jcarousel-control a {
+	display:inline;
+	margin-left:0;
+}
+.jcarousel-item{
+	width: 725px !important; 
+
+}
+.jcarousel-clip {
+	max-width: 725px !important;
+	height: 279px;
+	overflow: hidden;
+}
+.jcarousel-control {
+	padding:0 2px;
+}
+.jcarousel-control a {
+	
+	overflow:hidden;
+	display:inline-block;
+	text-indent:-9999px;
+	width:19px;
+	height:19px;
+	background:url(images/bg-promo-ul.png) no-repeat;
+	padding:0;
+	margin: 10px 4px 5px;
+}
+/*.jcarousel-control a:hover,
+.jcarousel-control a.active {
+	background:url(images/bg-promo-ul.png) no-repeat;
+}*/
+.jcarousel-control .green {
+	background:url(images/bg-promo-green.png) no-repeat;
+	margin: 5px 4px;
+}
+/*.jcarousel-control a:hover,
+.jcarousel-control a.active {
+	background:url(images/bg-promo-ul.png) no-repeat;
+}*/
+.jcarousel-control a.green:hover,
+.jcarousel-control a.green.active {
+	background:url(images/bg-promo-ul.png) no-repeat;
+}
+.jcarousel-control .blue {
+	background:url(images/bg-promo-blue2.png) no-repeat;
+}
+.jcarousel-control a.blue:hover,
+.jcarousel-control a.blue.active {
+	background:url(images/bg-promo-blue2-ha.png) no-repeat;
+}
+.jcarousel-control  .orange {
+	background:url(images/bg-promo-orange.png) no-repeat;
+}
+.jcarousel-control a.orange:hover,
+.jcarousel-control a.orange.active {
+	background:url(images/bg-promo-orange-ha.png) no-repeat;
+}
+.jcarousel-control .pink {
+	background:url(images/bg-promo-pink.png) no-repeat;
+}
+.jcarousel-control a.pink:hover,
+.jcarousel-control a.pink.active {
+	background:url(images/bg-promo-pink-ha.png) no-repeat;
+}
+.jcarousel-control .yellow {
+	background:url(images/bg-promo-yellow.png) no-repeat;
+}
+.jcarousel-control a.yellow:hover,
+.jcarousel-control a.yellow.active {
+	background:url(images/bg-promo-yellow-ha.png) no-repeat;
+}
+.jcarousel-control .brown {
+	background:url(images/bg-promo-brown.png) no-repeat;
+}
+.jcarousel-control a.brown:hover,
+.jcarousel-control a.brown.active {
+	background:url(images/bg-promo-brown-ha.png) no-repeat;
+}
+.jcarousel-control .darkblue {
+	background:url(images/bg-promo-dblue.png) no-repeat;
+}
+.jcarousel-control a.darkblue:hover,
+.jcarousel-control a.darkblue.active {
+	background:url(images/bg-promo-dblue-ha.png) no-repeat;
+}
+.jcarousel-control span {
+	display:inline;
+	padding:0;
+}
+.jcarousel-control a.active span, 
+.jcarousel-control a:hover span {
+	background:url(images/bg-promo-ul.png) no-repeat;
+}
+
+
+#content{
+	float: right;
+}
+#twocolumns{
+	width: 65%;
+}
+#twocolumns .aside{
+	
+	width: 484px;
+	margin-top: 10px;
+}
+
+.mainwidgets aside{
+	width: 484px;
+	background: url(images/bg-content-b.png) no-repeat 0 100%;
+	font-size: 13px;
+	line-height: 18px;
+	padding-bottom: 85px;
+	margin-bottom: 10px;
+}
+.mainwidgets .holder {
+background: url(images/bg-content-t3.png) no-repeat;
+padding-top: 100px;
+}
+.mainwidgets .frame {
+background: url(images/bg-content-c.png) repeat-y;
+padding: 0 4px;
+}
+.mainwidgets .block {
+width: 400px;
+background: url(images/bg-content-over.png) no-repeat;
+padding: 19px 24px 28px;
+}
+
+#nav {
+font: 20px/24px 'scouternadinpro-medium-webfont', Arial, Helvetica, sans-serif;
+}
+
+.boxes .box {
+	float:none;
+	font-size: 24px;
+	height:auto;
+	margin:0 auto;
+}
+.columns,
+.columns-holder,
+.columns-frame,
+.columns-block {
+	background:none;
+	padding:0;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.columns .column {
+	float:none;
+	width: 429px;
+	margin:0 auto;
+	padding: 10px 0 25px;
+}
+
+.columns .left-column {
+	float:none;
+	margin:0 auto;
+	overflow:hidden;
+	padding-top:10px;
+}
+
+iframe {
+    height: 270px;
+    max-width: 100%;
+}
+
+#footer {
+    margin: 0 0;
+}

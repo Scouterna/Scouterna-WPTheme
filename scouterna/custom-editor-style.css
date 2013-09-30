@@ -1,0 +1,83 @@
+@font-face {
+	font-family: 'scouternadinpro-medium-webfont';
+	src: url('fonts/scouternadinpro-medium-webfont.eot');
+	src: url('fonts/scouternadinpro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+	url('fonts/scouternadinpro-medium-webfont.woff') format('woff'),
+	url('fonts/scouternadinpro-medium-webfont.ttf') format('truetype'),
+	url('fonts/scouternadinpro-medium-webfont.svg#AvenirHeavy') format('svg');
+	font-weight:bold;
+	font-style:normal;
+}
+@font-face {
+	font-family: 'scouternadinpro-regular-webfont';
+	src: url('fonts/scouternadinpro-regular-webfont.eot');
+	src: url('fonts/scouternadinpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('fonts/scouternadinpro-regular-webfont.woff') format('woff'),
+	url('fonts/scouternadinpro-regular-webfont.ttf') format('truetype'),
+	url('fonts/scouternadinpro-regular-webfont.svg#AvenirHeavy') format('svg');
+	font-weight:bold;
+	font-style:normal;
+}
+#tinymce {
+	font-size: 12px;
+}
+#tinymce p,
+#tinymce h1,
+#tinymce h2,
+#tinymce h3,
+#tinymce h4,
+#tinymce h5,
+#tinymce h6,
+#tinymce blockquote,
+#tinymce cite {
+	font-family: Georgia, serif;
+}
+#tinymce p {
+	margin:0 0 10px;
+}
+#tinymce h1,
+#tinymce h2,
+#tinymce h3,
+#tinymce h4,
+#tinymce h5,
+#tinymce h6 {
+	margin: 25px 0 5px; 
+	text-transform: none;
+	letter-spacing: normal;
+}
+.content-preamble {
+	font-weight: bold;
+	font-size: 16px;
+}
+#tinymce table {
+	border-top:2px solid #c2d1cf!important;
+	border-bottom:1px solid #c2d1cf!important;
+	width: 100%;
+}
+	#tinymce table td {
+		padding: 8px 10px;
+		border-left:1px solid #c2d1cf!important;
+		border-bottom:1px solid #c2d1cf!important;
+		font: 13px Georgia, serif;
+	}
+	#tinymce table td:first-child {
+			border-left: none!important;
+			padding-left: 2px;
+		}
+	#tinymce thead td {
+		background: #E6E2D6;
+		font-weight: bold;
+	}
+#tinymce h2 {
+	color:#205B84;
+  	font: 24px/26px 'scouternadinpro-medium-webfont', Arial, Helvetica, sans-serif;  
+  }
+#tinymce h3 {
+	font:20px/24px 'scouternadinpro-medium-webfont', Arial, Helvetica, sans-serif;
+	color:#205b84;
+}
+#tinymce h4,
+#tinymce h5,
+#tinymce h6 {
+	font-weight: bold;
+}
