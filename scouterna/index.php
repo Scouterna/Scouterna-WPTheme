@@ -23,21 +23,20 @@ get_header(); ?>
 				<div class="content-frame">
 					<div class="content-block">
 
-						<?php if ( have_posts() ) : ?>
+						<?php 
+
+							if ( have_posts() ) {
 			
-							<?php /* Start the Loop */ ?>
-							<?php while ( have_posts() ) : the_post(); ?>
+								/* Start the Loop */ 
+								while ( have_posts() ) {
+									the_post();
+									get_template_part('content', 'blog-archives');
+								}
 
-								<?php
-										get_template_part('content', 'blog-archives');
-									
-								?>
+							twentyeleven_content_nav( 'nav-below' ); 
 
-							<?php endwhile; ?>
-
-							<?php twentyeleven_content_nav( 'nav-below' ); ?>
-
-						<?php else : ?>
+							} else { 
+						?>
 
 							<article id="post-0" class="post no-results not-found">
 								<header class="entry-header">
@@ -50,7 +49,7 @@ get_header(); ?>
 								</div><!-- .entry-content -->
 							</article><!-- #post-0 -->
 			
-						<?php endif; ?>
+						<?php } ?>
 					</div><!-- .content-block -->
 				</div><!-- .content-frame -->
 			</div><!-- .content-holder -->
