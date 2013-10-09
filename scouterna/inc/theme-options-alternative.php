@@ -14,8 +14,17 @@ function scouterna_alt_options_init() { // whitelist options
  * Create option menu for Alternativ
  */
 function scouterna_alt_options_add_pages() {
-	add_theme_page( __( 'Logo', 'scout' ), __( 'Logo', 'scout' ), 'edit_posts', 'scouterna-alternativ', 'scouterna_logo_options_do_page' );
-	add_theme_page( __( 'Colour profile', 'scout' ), __( 'Colour profile', 'scout' ), 'edit_posts', 'scouterna-alternativ-colortheme', 'scouterna_colortheme_options_do_page' );
+	add_theme_page( __( 'Logo', 'scout' ),
+					__( 'Logo', 'scout' ),
+					'edit_posts',
+					'scouterna-alternativ',
+					'scouterna_logo_options_do_page' );
+	
+	add_theme_page( __( 'Colour profile', 'scout' ),
+					__( 'Colour profile', 'scout' ),
+					'edit_posts',
+					'scouterna-alternativ-colortheme',
+					'scouterna_colortheme_options_do_page' );
 }
 
 /**
