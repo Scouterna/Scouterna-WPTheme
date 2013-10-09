@@ -477,8 +477,8 @@ function adjust_the_wp_menu() {
 }
 add_action( 'after_setup_theme','remove_twentyeleven_options', 100 );
 function remove_twentyeleven_options() {	
-	if( function_exists( remove_theme_support( 'custom-header' )  ) ) {
-		remove_theme_support( 'custom-header' ) ;		
+	if( function_exists( 'remove_custom_image_header' ) ) {
+		remove_custom_image_header();		
 	} else {
 		remove_theme_support( 'custom-header' );
 	}

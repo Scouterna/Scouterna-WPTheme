@@ -12,11 +12,7 @@ function scouterna_footer_options_init() { // whitelist options
  * Load up the menu page
  */
 function scouterna_footer_options_add_page() {
-	add_theme_page( __( 'Footer', 'scout' ),
-				    __( 'Footer', 'scout' ), 
-				    'manage_options',
-				    'footer_options',
-				    'scouterna_footer_options_do_page' );
+	add_theme_page( __( 'Footer', 'scout' ), __( 'Footer', 'scout' ), 'manage_options', 'footer_options', 'scouterna_footer_options_do_page' );
 }
 
 

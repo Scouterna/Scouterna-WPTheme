@@ -142,7 +142,6 @@ function twentyeleven_theme_options_help() {
  *
  * @since Twenty Eleven 1.0
  */
-
 function twentyeleven_color_schemes() {
 	$color_scheme_options = array(
 		'light' => array(
@@ -160,6 +159,33 @@ function twentyeleven_color_schemes() {
 	);
 
 	return apply_filters( 'twentyeleven_color_schemes', $color_scheme_options );
+}
+
+/**
+ * Returns an array of layout options registered for Twenty Eleven.
+ *
+ * @since Twenty Eleven 1.0
+ */
+function twentyeleven_layouts() {
+	$layout_options = array(
+		'content-sidebar' => array(
+			'value' => 'content-sidebar',
+			'label' => __( 'Content on left', 'twentyeleven' ),
+			'thumbnail' => get_template_directory_uri() . '/inc/images/content-sidebar.png',
+		),
+		'sidebar-content' => array(
+			'value' => 'sidebar-content',
+			'label' => __( 'Content on right', 'twentyeleven' ),
+			'thumbnail' => get_template_directory_uri() . '/inc/images/sidebar-content.png',
+		),
+		'content' => array(
+			'value' => 'content',
+			'label' => __( 'One-column, no sidebar', 'twentyeleven' ),
+			'thumbnail' => get_template_directory_uri() . '/inc/images/content.png',
+		),
+	);
+
+	return apply_filters( 'twentyeleven_layouts', $layout_options );
 }
 
 /**
@@ -189,8 +215,16 @@ function twentyeleven_get_default_theme_options() {
  * @return $string Color.
 */
 function twentyeleven_get_default_link_color( $color_scheme = null ) {
-	// TODO: Remove this function whenever possible.
-	return false;
+	if ( null === $color_scheme ) {
+		$options = twentyeleven_get_theme_options();
+		$color_scheme = $options['color_scheme'];
+	}
+
+	$color_schemes = twentyeleven_color_schemes();
+	if ( ! isset( $color_schemes[ $color_scheme ] ) )
+		return false;
+
+	return $color_schemes[ $color_scheme ]['default_link_color'];
 }
 
 /**
@@ -200,6 +234,30 @@ function twentyeleven_get_default_link_color( $color_scheme = null ) {
  */
 function twentyeleven_get_theme_options() {
 	return get_option( 'twentyeleven_theme_options', twentyeleven_get_default_theme_options() );
+}
+
+/**
+ * Renders the Color Scheme setting field.
+ *
+ * @since Twenty Eleven 1.3
+ */
+function twentyeleven_settings_field_color_scheme() {
+	$options = twentyeleven_get_theme_options();
+
+	foreach ( twentyeleven_color_schemes() as $scheme ) {
+	?>
+	<div class="layout image-radio-option color-scheme">
+	<label class="description">
+		<input type="radio" name="twentyeleven_theme_options[color_scheme]" value="<?php echo esc_attr( $scheme['value'] ); ?>" <?php checked( $options['color_scheme'], $scheme['value'] ); ?> />
+		<input type="hidden" id="default-color-<?php echo esc_attr( $scheme['value'] ); ?>" value="<?php echo esc_attr( $scheme['default_link_color'] ); ?>" />
+		<span>
+			<img src="<?php echo esc_url( $scheme['thumbnail'] ); ?>" width="136" height="122" alt="" />
+			<?php echo $scheme['label']; ?>
+		</span>
+	</label>
+	</div>
+	<?php
+	}
 }
 
 /**
@@ -400,6 +458,27 @@ function twentyeleven_customize_register( $wp_customize ) {
 	$options  = twentyeleven_get_theme_options();
 	$defaults = twentyeleven_get_default_theme_options();
 
+	$wp_customize->add_setting( 'twentyeleven_theme_options[color_scheme]', array(
+		'default'    => $defaults['color_scheme'],
+		'type'       => 'option',
+		'capability' => 'edit_theme_options',
+	) );
+
+	$schemes = twentyeleven_color_schemes();
+	$choices = array();
+	foreach ( $schemes as $scheme ) {
+		$choices[ $scheme['value'] ] = $scheme['label'];
+	}
+
+	$wp_customize->add_control( 'twentyeleven_color_scheme', array(
+		'label'    => __( 'Color Scheme', 'twentyeleven' ),
+		'section'  => 'colors',
+		'settings' => 'twentyeleven_theme_options[color_scheme]',
+		'type'     => 'radio',
+		'choices'  => $choices,
+		'priority' => 5,
+	) );
+
 	// Link Color (added to Color Scheme section in Theme Customizer)
 	$wp_customize->add_setting( 'twentyeleven_theme_options[link_color]', array(
 		'default'           => twentyeleven_get_default_link_color( $options['color_scheme'] ),
@@ -408,6 +487,35 @@ function twentyeleven_customize_register( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	) );
 
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+		'label'    => __( 'Link Color', 'twentyeleven' ),
+		'section'  => 'colors',
+		'settings' => 'twentyeleven_theme_options[link_color]',
+	) ) );
+
+	// Default Layout
+	$wp_customize->add_section( 'twentyeleven_layout', array(
+		'title'    => __( 'Layout', 'twentyeleven' ),
+		'priority' => 50,
+	) );
+
+	$wp_customize->add_setting( 'twentyeleven_theme_options[theme_layout]', array(
+		'type'              => 'option',
+		'default'           => $defaults['theme_layout'],
+		'sanitize_callback' => 'sanitize_key',
+	) );
+
+	$layouts = twentyeleven_layouts();
+	$choices = array();
+	foreach ( $layouts as $layout ) {
+		$choices[$layout['value']] = $layout['label'];
+	}
+
+	$wp_customize->add_control( 'twentyeleven_theme_options[theme_layout]', array(
+		'section'    => 'twentyeleven_layout',
+		'type'       => 'radio',
+		'choices'    => $choices,
+	) );
 }
 add_action( 'customize_register', 'twentyeleven_customize_register' );
 
