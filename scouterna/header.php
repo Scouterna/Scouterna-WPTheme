@@ -105,6 +105,7 @@
     <div class="w1">
         
         <header id="header" role="banner">
+            <?php if ($scout_display_global_nav) { ?>
             <nav class="nav-add">
             <div class="menu-sajtnavigation-container">
                 <ul id="menu-sajtnavigation" class="add-nav">
@@ -123,6 +124,7 @@
                 </ul>
             </div>
             </nav>
+            <?php } ?>
             
             <div class="holder">
                 <?php

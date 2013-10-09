@@ -189,16 +189,7 @@ function twentyeleven_get_default_theme_options() {
  * @return $string Color.
 */
 function twentyeleven_get_default_link_color( $color_scheme = null ) {
-	// if ( null === $color_scheme ) {
-	// 	$options = twentyeleven_get_theme_options();
-	// 	$color_scheme = $options['color_scheme'];
-	// }
-
-	// $color_schemes = twentyeleven_color_schemes();
-	// if ( ! isset( $color_schemes[ $color_scheme ] ) )
-	// 	return false;
-
-	// return $color_schemes[ $color_scheme ]['default_link_color'];
+	// TODO: Remove this function whenever possible.
 	return false;
 }
 
