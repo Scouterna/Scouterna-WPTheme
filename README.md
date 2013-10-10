@@ -1,20 +1,10 @@
-# Fork av Scouternas wordpresstema, för utveckling
-
-Om du letar efter Scouternas Wordpresstema, vill du ladda ner och installera antingen från [Scouternas webbsida](http://webbsupport.scout.se/ladda-ner-temat/) eller från [Scouternas eget Github-repo] (https://github.com/Scouterna/Scouterna-WPTheme).
-
-## TODO
-
-* Sånt som är kul.
-
-================================================================================
-
-## Fristående Scouterna WordPresstema.
+# Fristående Scouterna WordPresstema.
 
 Temat är till för de kårer som vill driva en wordpress-sajt i egen regi men ändå vill ha en sajt som liknar Scouterna.se. Väljer man detta alternativ kan man inte räkna med support från Scouterna när det gäller installation och konfiguration. Den som väljer detta alternativ bör ha god kunskap om WordPress i allmänhet och erfarenhet av att installera teman.
 
 Temat är testat med WP 3.2.0 – 3.6.1.
 
 
-### ToDo
+## ToDo
 
 - Pluginet __”Breadcrumbs Nav XT”__ som man installerar för att visa brödsmulor för navigationsstöd följer med i zip-filen på [Scouternas webbsida](http://webbsupport.scout.se/ladda-ner-temat/) men är inte inlagt här. Kan vara ett dependency.
