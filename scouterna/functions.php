@@ -116,9 +116,8 @@ function twentyeleven_setup() {
 	// Add default posts and comments RSS feed links to <head>.
 	add_theme_support( 'automatic-feed-links' );
 
-	// This theme uses wp_nav_menu() in one location.
+	// This theme uses wp_nav_menu() in two locations:
 	register_nav_menu( 'top', __( 'Top Menu', 'scout' ) );
-	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'main', __( 'Main Menu', 'scout' ) );
 
 	// Add support for a variety of post formats
