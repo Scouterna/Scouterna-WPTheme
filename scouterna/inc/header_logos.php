@@ -81,7 +81,7 @@ function scouterna_display_plaintext_logo( $logostrong, $logonormal ){
 				<h1 id="site-title" class="logo-child">
 					<span>
 						<a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">
-							<span class="logobold">'.$logostrong.'</span>'.$logonormal.'
+							<span class="logobold">'.$logostrong.'</span> '.$logonormal.'
 						</a>
 					</span>
 				</h1>	
@@ -92,7 +92,7 @@ function scouterna_display_plaintext_logo( $logostrong, $logonormal ){
 			<div id="site-title" class="logo-child">
 				<span>
 					<a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">
-						<span class="logobold">'.$logostrong.'</span>'.$logonormal.'
+						<span class="logobold">'.$logostrong.'</span> '.$logonormal.'
 					</a>
 				</span>
 			</div>';
