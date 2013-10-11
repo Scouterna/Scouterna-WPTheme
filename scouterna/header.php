@@ -137,7 +137,8 @@
                     <?php
                         wp_nav_menu( array( 'theme_location' => 'top',
                                             'menu_class' => 'sub-nav',
-                                            'fallback_cb' => false ) );
+                                            'fallback_cb' => false,
+                                            'depth'           => 1 ) );
                     ?>
                 </nav>
             </div><!-- .holder -->
@@ -149,7 +150,8 @@
                     wp_nav_menu( array( 'theme_location' => 'main',
                                         'menu_id' => 'nav',
                                         'container_class' => 'menu-main-container',
-                                        'fallback_cb' => false ) );
+                                        'fallback_cb' => false,
+                                        'depth'           => 1 ) );
                 ?>
             </nav><!-- #access -->
             
