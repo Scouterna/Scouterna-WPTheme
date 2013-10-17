@@ -212,7 +212,7 @@
             } else if( !is_front_page() &&
                        !is_404() &&
                        $menuid =! "" &&
-                       !is_page_template('templates/page-fullwidth.php'))
+                       !is_page_template('page-fullwidth.php'))
             {    
                 get_template_part('sidebar', 'placeholder');
             }
