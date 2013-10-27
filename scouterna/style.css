@@ -352,14 +352,16 @@ blockquote{
 .searchform input[type="submit"] {
 	border:0;
 	float:left;
-	background:url(images/bg-submit.png) no-repeat;
-	width:34px;
+	background:url(images/bg-submit.png) repeat-x right;
+	min-width:34px;
 	height:25px;
 	font-size:11px;
 	line-height:12px;
 	color:#fff;
-	padding:0 0 1px;
+	padding:0 3px 1px 3px;
 	text-transform:uppercase;
+  margin-left: -1px;
+  border-left: 1px #0f3049 solid;
 }
 .gcs_searchform #searchsubmit {	
 	background:url(images/bg-submit-repeatable.png) repeat-x;
