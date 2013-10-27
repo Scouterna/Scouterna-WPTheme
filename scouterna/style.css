@@ -360,6 +360,7 @@ blockquote{
 	color:#fff;
 	padding:0 3px 1px 3px;
 	text-transform:uppercase;
+  margin-left: -1px;
 }
 .gcs_searchform #searchsubmit {	
 	background:url(images/bg-submit-repeatable.png) repeat-x;
